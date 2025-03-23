@@ -2,6 +2,7 @@
 Script to run a VLM model on the MMMU Geography dataset.
 """
 
+import wandb
 import argparse
 import threading
 import time
@@ -16,6 +17,8 @@ from torchvision.transforms.functional import InterpolationMode
 from transformers import AutoModel, AutoTokenizer
 
 warnings.filterwarnings("ignore")
+
+wandb.init(project="multimodal-abc")
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -186,6 +189,13 @@ def gpu_memory_monitor(interval=0.1, gpu_id=0):
             print(f"Used: {max_memory:.2f} MB")
             print(f"Total: {total_memory:.2f} MB")
             print(f"Percentage: {(max_memory/total_memory)*100:.2f}%")
+            log = {
+                "max_memory": max_memory,
+                "total_memory": total_memory,
+                "percentage": (max_memory / total_memory) * 100,
+            }
+            wandb.log(log)
+            wandb.finish()
         return results
 
     return start_monitor, stop_monitor, results

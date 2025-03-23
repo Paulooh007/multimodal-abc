@@ -1,8 +1,7 @@
 name: mmmu
 channels:
-  - defaults
   - conda-forge
-  - anaconda
+  - defaults
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
@@ -38,13 +37,13 @@ dependencies:
   - brotli-python=1.0.9=py312h6a678d5_9
   - bzip2=1.0.8=h5eee18b_6
   - c-ares=1.19.1=h5eee18b_0
-  - ca-certificates=2025.1.31=hbcca054_0
+  - ca-certificates=2025.2.25=h06a4308_0
   - certifi=2025.1.31=py312h06a4308_0
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
   - click=8.1.7=py312h06a4308_0
   - colorama=0.4.6=py312h06a4308_0
   - comm=0.2.2=pyhd8ed1ab_1
-  - datasets=3.2.0=pyhd8ed1ab_0
+  - datasets=3.4.1=pyhd8ed1ab_0
   - debugpy=1.8.12=py312h2ec8cdc_0
   - decorator=5.2.1=pyhd8ed1ab_0
   - dill=0.3.8=py312h06a4308_0
@@ -121,6 +120,7 @@ dependencies:
   - numexpr=2.10.1=py312h3c60e43_0
   - numpy=2.2.2=py312hc5e2394_0
   - numpy-base=2.2.2=py312h0da6c21_0
+  - nvidia-ml-py=12.570.86=pyhd8ed1ab_0
   - openssl=3.4.1=h7b32b05_0
   - orc=2.0.1=h2d29ad5_0
   - packaging=24.2=py312h06a4308_0
@@ -143,6 +143,7 @@ dependencies:
   - pydantic-core=2.27.1=py312h4aa5aa6_0
   - pygments=2.19.1=pyhd8ed1ab_0
   - pylint=3.3.3=py312h06a4308_0
+  - pynvml=12.0.0=pyhd8ed1ab_0
   - pysocks=1.7.1=py312h06a4308_0
   - python=3.12.2=hab00c5b_0_cpython
   - python-dateutil=2.9.0post0=py312h06a4308_2
